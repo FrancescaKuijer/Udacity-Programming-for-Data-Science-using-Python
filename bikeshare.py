@@ -29,7 +29,8 @@ def get_filters():
         month = input("Which month would you like to analyze " + city.title() + 
                       "? You can choose between January, February, March, " +
                       "April, May and June, or type all if you do not wish "+
-                      "to specify a month.\n\n")
+                      "to specify a month.\n\n Warning!: Only the first six months of the year can be chosen " +
+                      "as for the other months there is a lack in user data.")
         month = month.lower()
         
         if month in ('january', 'february', 'march', 'april', 'may', 
