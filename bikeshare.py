@@ -94,11 +94,11 @@ def time_stats(df, month, day):
 
         months = ['January', 'February', 'March', 'April', 'May', 'June']
         pop_month = months(pop_month -1) if pop_month != 'N/A' else pop_month
-        print(f"The Most Popular Travel Month is (1 = January, ..., 6 = June): {pop_month}")
+        print(f"The Most Popular Month is (1 = January, ..., 6 = June): {pop_month}")
     
     if day == 'All':
         pop_day = df['weekday'].mode()[0] if not df['day_of_week'].mode().empty else 'N/A'
-        print(f"The Most Popular Travel Day is: {pop_day}")
+        print(f"The Most Popular Day is: {pop_day}")
 
 
     df['hour'] = df ['Start Time'].dt.hour
@@ -196,7 +196,7 @@ def display_data(df):
 
     while True:
         response = ['yes','no']
-        choice = input("Would you like to view individual trip data (5 entries)? Type 'Yes' or 'No'\n").lower()
+        choice = input("Would you like to view individual trip data (5 entries)? Type 'Y' or 'N'\n").lower()
         if choice in response:
             if choice == 'yes':
                 start = 0
