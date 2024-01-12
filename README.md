@@ -13,7 +13,7 @@ Installing **Git tool**: https://git-scm.com/downloads
 
 ### Files used
 1. The following file contains necessary commands used to do tasks:
-    - Git commands documentation.pdf
+    - Git Commands Documentation.pdf
 2. The following files help to understand the Git key terms:
     - Git-KeyTerms.pdf
 
