@@ -17,7 +17,7 @@ def get_filters():
     """
     print('Hello! Let\'s explore some US bikeshare data!')
     while True:
-        city = input("Let's first select a city! Which city are you interested "+
+        city = input("Let's select a city! Which city are you interested "+
                      "in: Chicago, New York City or Washington?\n\n")
         city = city.lower()
         
@@ -176,7 +176,7 @@ def user_stats(df, city):
         earliest = int(df['Birth Year'].min())
         recent = int(df['Birth Year'].max())
         common_year = int(df['Birth Year'].mode()[0])
-        print(f"\nThe earliest year of birt:{earliest}\n\nThe most recent year of birth: {recent}\n\nThe most common year of birth: {common_year}")
+        print(f"\nThe earliest year of birth:{earliest}\n\nThe most recent year of birth: {recent}\n\nThe most common year of birth: {common_year}")
         
     except KeyError: 
         print("There are no birth year details in this file.")
@@ -197,7 +197,7 @@ def display_data(df):
 
     while True:
         response = ['yes','no']
-        choice = input("Would you like to view individual trip data (5 entries)? Type 'yes' or 'no'\n").lower()
+        choice = input("Would you like to view individual trip data (5 entries)? Type 'Y' or 'N'\n").lower()
         if choice in response:
             if choice == 'yes':
                 start = 0
@@ -210,7 +210,7 @@ def display_data(df):
 
     if  choice =='yes':       
             while True:
-                choice_2= input("Would you like to view more trip data? Type 'yes' or 'no'\n").lower()
+                choice_2= input("Would you like to view more trip data? Type 'Yes' or 'No'\n").lower()
                 if choice_2 in response:
                     if choice_2 =='yes':
                         start += 5
@@ -220,7 +220,7 @@ def display_data(df):
                     else:    
                         break  
                 else:
-                    print("Please enter a valid response")              
+                    print("Please enter a valid response.")              
 
 
 
@@ -235,7 +235,7 @@ def main():
         user_stats(df, city)
         display_data(df)
 
-        restart = input('\nWould you like to restart? Enter yes or no.\n')
+        restart = input('\nWould you like to restart? Enter 'Yes' or 'No'.\n')
         if restart.lower() != 'yes':
             print('See you next time.')
             break
